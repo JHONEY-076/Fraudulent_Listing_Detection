@@ -1,0 +1,78 @@
+{
+  "selected_candidate": {
+    "name": "cat_d7_w3",
+    "family": "CatBoost",
+    "params": {
+      "depth": 7,
+      "class_weights": [
+        1.0,
+        3.0
+      ],
+      "l2_leaf_reg": 7
+    }
+  },
+  "threshold": 0.5077266328246275,
+  "selection_min_recall": 0.8,
+  "development_size": 1961,
+  "holdout_size": 491,
+  "development_positives": 238,
+  "holdout_positives": 60,
+  "oof_selection_metrics": {
+    "threshold": 0.5077266328246275,
+    "accuracy": 0.9719530851606323,
+    "precision": 0.8927038626609443,
+    "recall": 0.8739495798319328,
+    "f1": 0.8832271762208068,
+    "roc_auc": 0.9799914161834207,
+    "average_precision": 0.9081063162015235,
+    "tn": 1698,
+    "fp": 25,
+    "fn": 30,
+    "tp": 208
+  },
+  "holdout_default": {
+    "threshold": 0.5,
+    "accuracy": 0.9653767820773931,
+    "precision": 0.8524590163934426,
+    "recall": 0.8666666666666667,
+    "f1": 0.859504132231405,
+    "roc_auc": 0.9796597061098222,
+    "average_precision": 0.9195526833765563,
+    "tn": 422,
+    "fp": 9,
+    "fn": 8,
+    "tp": 52
+  },
+  "holdout_tuned": {
+    "threshold": 0.5077266328246275,
+    "accuracy": 0.9653767820773931,
+    "precision": 0.8524590163934426,
+    "recall": 0.8666666666666667,
+    "f1": 0.859504132231405,
+    "roc_auc": 0.9796597061098222,
+    "average_precision": 0.9195526833765563,
+    "tn": 422,
+    "fp": 9,
+    "fn": 8,
+    "tp": 52
+  },
+  "holdout_recall_target_met": true,
+  "holdout_bootstrap_95_ci": {
+    "recall": [
+      0.7829166666666667,
+      0.9337499999999996
+    ],
+    "f1": [
+      0.7923995739500913,
+      0.9180327868852459
+    ]
+  },
+  "evaluation_notes": [
+    "OOF scores are used for model/threshold selection and are optimistic selection scores, not independent test scores.",
+    "Holdout labels were excluded from preprocessing, fitting, candidate selection, and threshold tuning in this run.",
+    "All rows come from the existing project dataset; this is not a new external validation dataset.",
+    "Recall constraint applies to development OOF predictions; it is not a guarantee on new data.",
+    "Bootstrap intervals condition on the fixed model and this holdout; they exclude model selection uncertainty.",
+    "Saved model is trained on development rows only, matching the evaluated model. No all-data refit is performed."
+  ]
+}
